@@ -9,6 +9,7 @@ A simple fixed widht height ratio imageview.
 
 Below is an example of a AspectRatioLayout, you need to set a exact value to width/height and wrap_content to another, don't forget to add app:widthHeightRatio="xxx".
 
+```xml
     <com.sherlock.aspectratio.AspectRatioLayout
         android:layout_width="200dp"
         android:layout_height="wrap_content"
@@ -22,6 +23,18 @@ Below is an example of a AspectRatioLayout, you need to set a exact value to wid
             android:scaleType="centerCrop"
             android:src="@drawable/ic_launcher" />
     </com.sherlock.aspectratio.AspectRatioLayout>
+```
+    Or
+```xml
+    <com.sherlock.aspectratio.AspectRatioImageView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_bright"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher"
+        app:widthHeightRatio="2" >
+```
 
 # Changelog
 
