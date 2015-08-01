@@ -24,7 +24,7 @@ Below is an example of a AspectRatioLayout, you need to set a exact value to wid
             android:src="@drawable/ic_launcher" />
     </com.sherlock.aspectratio.AspectRatioLayout>
 ```
-    Or
+Or a simple ImageView
 ```xml
     <com.sherlock.aspectratio.AspectRatioImageView
         android:layout_width="200dp"
