@@ -1,0 +1,222 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.sherlock.sample.aspectratio.MainActivity" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:lines="1"
+            android:text="In LinearLayout with weight example, 0.75:1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.sherlock.aspectratio.AspectRatioImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/holo_blue_bright"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher"
+                app:widthHeightRatio="0.75" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="52dp" />
+
+            <com.sherlock.aspectratio.AspectRatioImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/holo_blue_bright"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher"
+                app:widthHeightRatio="0.75" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:lines="1"
+            android:text="In RelativeLayout example, 2:1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="126dp" >
+
+            <com.sherlock.aspectratio.AspectRatioImageView
+                android:id="@+id/temp"
+                android:layout_width="wrap_content"
+                android:layout_height="126dp"
+                android:layout_alignParentLeft="true"
+                android:background="@android:color/holo_blue_bright"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher"
+                app:widthHeightRatio="2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/temp"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/temp"
+                android:layout_toRightOf="@id/temp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="@string/hello_world" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="@string/hello_world" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:lines="1"
+            android:text="match_parent example, 2:1" />
+
+        <com.sherlock.aspectratio.AspectRatioImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_bright"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher"
+            app:widthHeightRatio="2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:lines="1"
+            android:text="------------- network image -------------" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:lines="1"
+            android:text="In LinearLayout with weight example, 0.75:1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.sherlock.aspectratio.AspectRatioImageView
+                android:id="@+id/img1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/holo_blue_bright"
+                android:scaleType="centerCrop"
+                app:widthHeightRatio="0.75" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="52dp" />
+
+            <com.sherlock.aspectratio.AspectRatioImageView
+                android:id="@+id/img2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/holo_blue_bright"
+                android:scaleType="centerCrop"
+                app:widthHeightRatio="0.75" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:lines="1"
+            android:text="In RelativeLayout example, 2:1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="126dp" >
+
+            <com.sherlock.aspectratio.AspectRatioImageView
+                android:id="@+id/img3"
+                android:layout_width="wrap_content"
+                android:layout_height="126dp"
+                android:layout_alignParentLeft="true"
+                android:background="@android:color/holo_blue_bright"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                app:widthHeightRatio="2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/img3"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/img3"
+                android:layout_toRightOf="@id/img3"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="@string/hello_world" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="@string/hello_world" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:lines="1"
+            android:text="match_parent example, 2:1" />
+
+        <com.sherlock.aspectratio.AspectRatioImageView
+            android:id="@+id/img4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_bright"
+            android:scaleType="centerCrop"
+            app:widthHeightRatio="2" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="widthHeightRatio" format="float" />
+
+    <declare-styleable name="AspectRatioImageView">
+        <attr name="widthHeightRatio" />
+    </declare-styleable>
+    <declare-styleable name="AspectRatioLayout">
+        <attr name="widthHeightRatio" />
+    </declare-styleable>
+
+</resources>
